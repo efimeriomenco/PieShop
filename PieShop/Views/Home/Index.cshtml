@@ -1,0 +1,18 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<partial name="_Carousel" />
+
+<div class="bg-light rounded">
+    <h2 class="font-italic d-flex justify-content-center m-5">Pies Of The Week</h2>
+
+    <div class="row">
+        @foreach (var pie in Model.pieIsFavourite)
+        {
+            <partial name="_PieCard" model="pie" />
+        }
+    </div>
+
+</div>
